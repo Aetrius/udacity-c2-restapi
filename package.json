@@ -4,11 +4,11 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.ts",
+    "start": "node .",
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
+    "dev": "ts-node-dev ./src/server.ts",
     "prod": "tsc && node ./www/server.js",
-    "clean": "rm -rf www/ || true",
+    "clean": "rimraf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,6 @@
     "aws-sdk": "^2.492.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
-    "custom-env": "^2.0.1",
     "dotenv": "^8.2.0",
     "email-validator": "^2.0.4",
     "express": "^4.17.1",

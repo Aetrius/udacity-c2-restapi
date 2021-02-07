@@ -44,3 +44,4 @@ venv/
 #configuration AWS
 .env
 .profile
+.connection
