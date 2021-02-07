@@ -5,7 +5,7 @@ const c = config.aws;
 
 //Configure AWS
 if (c.aws_profile !== "DEPLOYED") {
-  var credentials = new AWS.SharedIniFileCredentials({profile: 'default'});
+  var credentials = new AWS.SharedIniFileCredentials({profile: 'aws_profile'});
   AWS.config.credentials = credentials;
 }
 
